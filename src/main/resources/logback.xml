@@ -63,7 +63,7 @@
     </root>
 
     <!-- jihex相关的日志级别-->
-    <logger name="com.jihex" level="DEBUG" />
+    <logger name="com.test" level="DEBUG" />
     <logger name="java.sql.PreparedStatement" level="DEBUG" />
     <logger name="org.apache.ibatis" level="DEBUG" />
 

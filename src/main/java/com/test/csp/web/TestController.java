@@ -7,6 +7,7 @@ import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.alibaba.csp.sentinel.slots.block.RuleConstant;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
+import com.test.csp.exception.ExceptionUtil;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -67,7 +68,7 @@ public class TestController  {
     * @author: fanjc
     * @Date: 2019/5/15
     */
-    @SentinelResource(value = "demoTest")
+    @SentinelResource(value = "demoTest",blockHandler = "exceptionHandler", blockHandlerClass = { ExceptionUtil.class })
     @GetMapping(value = "/demoTest", produces = "application/json;charset=UTF-8")
     public String getTest1()  {
             System.out.println("demoTest isOk");

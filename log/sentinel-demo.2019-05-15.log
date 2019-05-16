@@ -1,0 +1,24 @@
+[ERROR] [2019-05-15 18:19:48.846] [o.s.c.a.sentinel.custom.SentinelDataSourceHandler]  [198] - [[Sentinel Starter] DataSource ds1-sentinel-apollo-datasource loadConfig error: convert error: convert 0 rules but there are 2 rules from datasource. RuleClass: FlowRule]
+java.lang.RuntimeException: convert error: convert 0 rules but there are 2 rules from datasource. RuleClass: FlowRule
+	at org.springframework.cloud.alibaba.sentinel.datasource.converter.SentinelConverter.convert(SentinelConverter.java:84)
+	at org.springframework.cloud.alibaba.sentinel.datasource.converter.SentinelConverter.convert(SentinelConverter.java:37)
+	at com.alibaba.csp.sentinel.datasource.AbstractDataSource.loadConfig(AbstractDataSource.java:48)
+	at com.alibaba.csp.sentinel.datasource.AbstractDataSource.loadConfig(AbstractDataSource.java:44)
+	at org.springframework.cloud.alibaba.sentinel.custom.SentinelDataSourceHandler.logAndCheckRuleType(SentinelDataSourceHandler.java:195)
+	at org.springframework.cloud.alibaba.sentinel.custom.SentinelDataSourceHandler.registerBean(SentinelDataSourceHandler.java:184)
+	at org.springframework.cloud.alibaba.sentinel.custom.SentinelDataSourceHandler.lambda$afterSingletonsInstantiated$0(SentinelDataSourceHandler.java:72)
+	at java.util.TreeMap.forEach(TreeMap.java:1005)
+	at org.springframework.cloud.alibaba.sentinel.custom.SentinelDataSourceHandler.afterSingletonsInstantiated(SentinelDataSourceHandler.java:60)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:776)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230)
+	at com.test.csp.Application.main(Application.java:32)
+Caused by: java.lang.IllegalArgumentException: convert 0 rules but there are 2 rules from datasource. RuleClass: FlowRule
+	at org.springframework.cloud.alibaba.sentinel.datasource.converter.SentinelConverter.convert(SentinelConverter.java:80)
+	... 18 common frames omitted
