@@ -49,18 +49,6 @@
             <artifactId>sentinel-web-servlet</artifactId>
             <version>${sentinel.version}</version>
         </dependency>
-        <!--alibaba sentinel dataSource pull-->
-        <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-datasource-extension</artifactId>
-            <version>${sentinel.version}</version>
-        </dependency>
-        <!--流控储存在apollo-->
-        <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-datasource-apollo</artifactId>
-            <version>${sentinel.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
