@@ -16,6 +16,7 @@
 
 package com.test.csp;
 
+import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -24,7 +25,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Created by fanjc on 2019/5/15.
  */
 @SpringBootApplication
-//@EnableApolloConfig
+@EnableApolloConfig
 public class Application  {
 
 	public static void main(String[] args) throws Exception {

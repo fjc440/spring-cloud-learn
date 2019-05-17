@@ -3,6 +3,7 @@ package com.test.csp.web;
 import com.alibaba.csp.sentinel.Entry;
 import com.alibaba.csp.sentinel.SphU;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.alibaba.csp.sentinel.context.ContextUtil;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.alibaba.csp.sentinel.slots.block.RuleConstant;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
@@ -73,7 +74,6 @@ public class TestController  {
     public String getTest1()  {
             System.out.println("demoTest isOk");
             return "isOk";
-
     }
 
 
